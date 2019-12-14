@@ -22,7 +22,7 @@
   },
   "scripts": {
     "serve": "react-scripts start",
-    "backend": "json-server --watch db.json --port 5000 --delay=750",
+    "backend": "json-server --watch db.json --port 5000 --delay=1000",
     "start": "concurrently \"npm run backend\" \"npm run serve\""
   },
   "eslintConfig": {

@@ -9,7 +9,7 @@ import store from './store';
 
 function App() {
   return (
-    <Provider store={}>
+    <Provider store={store}>
       <BrowserRouter>
           <>
             <div className="container">
