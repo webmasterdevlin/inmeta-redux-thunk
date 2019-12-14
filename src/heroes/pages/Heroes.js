@@ -16,7 +16,7 @@ export default function Heroes() {
                 ? 
                 <h2>Loading.. Please wait..</h2>
                 :
-                heroes.map(h => <li>{h.firstName}</li>)
+                heroes.map(h => <li key={h.id}>{`${h.firstName} ${h.lastName} is ${h.knownAs}`}</li>)
             }</ul>
         </div>
     )

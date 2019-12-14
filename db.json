@@ -6,7 +6,15 @@
     },
     {
      "id": "1ggew732dw","firstName": "Scott", "lastName": "Summer",
-      "house": "Marvel","knownAs": "Cyclops"
+      "house": "Marvel","knownAs": "Cyclopes"
+    },
+    {
+     "id": "dfw7g2","firstName": "Peter", "lastName": "Parker",
+      "house": "Marvel","knownAs": "Spiderman"
+    },
+    {
+     "id": "9gfw9gde","firstName": "Bruce", "lastName": "Wayne",
+      "house": "DC","knownAs": "Batman"
     }
   ]
 }
