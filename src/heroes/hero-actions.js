@@ -1,4 +1,4 @@
-import {getHeroes, deleteHeroById} from './hero-service'
+import {getHeroes, deleteHeroById, postHero} from './hero-service'
 
 /* actions types */
 export const FETCH_HEROES_REQUEST = "FETCH_HEROES_REQUEST";
@@ -8,6 +8,10 @@ export const FETCH_HEROES_FAIL = "FETCH_HEROES_FAIL";
 export const DELETE_HERO_REQUEST = "DELETE_HERO_REQUEST";
 export const DELETE_HERO_SUCCESS = "DELETE_HERO_SUCCESS";
 export const DELETE_HERO_FAIL = "DELETE_HERO_FAIL";
+
+export const ADD_HERO_REQUEST = "ADD_HERO_REQUEST";
+export const ADD_HERO_SUCCESS = "ADD_HERO_SUCCESS";
+export const ADD_HERO_FAIL = "ADD_HERO_FAIL";
 
 /* action creators: thunk version */
 export const fetchHeroes = () => {
@@ -32,6 +36,18 @@ export const removeHeroById = (id) => {
         } catch (e) {
             console.log(e.message);
             dispatch({type:DELETE_HERO_FAIL})
+        }
+    }
+}
+export const addHero = (hero) => {
+    return async dispatch => {
+        dispatch({type: ADD_HERO_REQUEST});
+        try {
+            const {data} = await postHero(hero);
+            dispatch({type: ADD_HERO_SUCCESS, payload: data})
+        } catch (e) {
+            console.log(e.message);
+            dispatch({type: ADD_HERO_FAIL})
         }
     }
 }

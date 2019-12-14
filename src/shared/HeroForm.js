@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Button from 'react-bootstrap/Button'
 export default function HeroForm() {
-    const [newHero, setNewHero] = useState({})
+    const [newHero, setNewHero] = useState({}) // sending a hero object
     const handleInputChange = (event) => {
         const heroFromForm = {...newHero};
         const {id, value} = event.currentTarget;
@@ -10,8 +10,8 @@ export default function HeroForm() {
         setNewHero(heroFromForm);
     }
     const handleSubmit = (e) => {
-        e.preventDefault(true)
-        console.log('submit newHero::', newHero)
+        e.preventDefault(true);
+        // TODO: dispatch(addNewHero(newHero));
     }
     return (
         <div>

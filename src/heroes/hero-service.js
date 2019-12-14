@@ -8,3 +8,6 @@ export async function getHeroes() {
 export async function deleteHeroById(id) {
     return await axios.delete(`${BaseUrl}/${id}`)
 }
+export async function postHero(hero) {
+    return await axios.post(BaseUrl, hero)
+}
