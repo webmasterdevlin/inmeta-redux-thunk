@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux';
 import {fetchHeroes, removeHeroById} from '../hero-actions'
+import HeroForm from '../../shared/HeroForm'
 import Button from 'react-bootstrap/Button'
 
 export default function Heroes() {
@@ -11,7 +12,8 @@ export default function Heroes() {
     }, [])
     return (
         <div>
-            <h1>Heroes works!</h1>
+            <h1>Super Heroes</h1>
+            <HeroForm />
             <ul>{
                 isLoading
                 ? 
