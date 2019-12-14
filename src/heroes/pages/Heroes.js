@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux';
 import {fetchHeroes} from '../hero-actions'
+import Button from 'react-bootstrap/Button'
 
 export default function Heroes() {
     const dispatch = useDispatch();
@@ -16,7 +17,10 @@ export default function Heroes() {
                 ? 
                 <h2>Loading.. Please wait..</h2>
                 :
-                heroes.map(h => <li key={h.id}>{`${h.firstName} ${h.lastName} is ${h.knownAs}`}</li>)
+                heroes.map(h => <li key={h.id}>
+                {`${h.firstName} ${h.lastName} is ${h.knownAs}`}
+                    <Button onClick={() => alert(`Deleting... ${h.id}`)} variant="danger">Delete</Button>
+                </li>)
             }</ul>
         </div>
     )
