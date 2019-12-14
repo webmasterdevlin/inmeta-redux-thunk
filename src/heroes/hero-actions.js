@@ -28,7 +28,7 @@ export const removeHeroById = (id) => {
         dispatch({type:DELETE_HERO_REQUEST});
         try {
             deleteHeroById(id);
-            dispatch({type:DELETE_HERO_SUCCESS}, payload: id)
+            dispatch({type:DELETE_HERO_SUCCESS, payload: id })
         } catch (e) {
             console.log(e.message);
             dispatch({type:DELETE_HERO_FAIL})

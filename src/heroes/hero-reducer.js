@@ -16,6 +16,13 @@ export const heroReducer = (state = initialState, action) => {
             return {...state, isLoading: false, heroes: action.payload }
         case types.FETCH_HEROES_FAIL:
             return {...state, isLoading: false}
+        case types.DELETE_HERO_REQUEST:
+            return {...state, isLoading:true}
+        case types.DELETE_HERO_SUCCESS:
+            return {...state, isLoading: false, 
+            heroes: state.heroes.filter(h => h.id !== action.payload)}
+        case types.DELETE_HERO_FAIL:
+            return {...state, isLoading: false}
         default:
             return state;
     }
