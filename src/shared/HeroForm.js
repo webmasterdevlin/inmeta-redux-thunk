@@ -18,10 +18,10 @@ export default function HeroForm() {
     return (
         <div>
          <form onSubmit={handleSubmit}>
-            <input placeHolder={'First Name'} id="firstName" onChange={handleInputChange} />
-            <input placeHolder={'Last Name'} id="lastName" onChange={handleInputChange} />
-          <input placeHolder={'House'} id="house" onChange={handleInputChange} />
-           <input placeHolder={'Known As'} id="knownAs" onChange={handleInputChange} />
+            <input placeholder={'First Name'} id="firstName" onChange={handleInputChange} />
+            <input placeholder={'Last Name'} id="lastName" onChange={handleInputChange} />
+          <input placeholder={'House'} id="house" onChange={handleInputChange} />
+           <input placeholder={'Known As'} id="knownAs" onChange={handleInputChange} />
            <Button type="submit" variant="primary">Send</Button>
          </form>
         </div>
